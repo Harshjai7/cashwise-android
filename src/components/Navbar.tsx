@@ -1,8 +1,7 @@
 
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Button } from "@/components/ui/button";
-import { CircleDollarSign, Home, PieChart, Plus, Settings } from "lucide-react";
+import { CircleDollarSign, Home, PieChart, Plus, Settings, BarChart } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 interface NavItem {
@@ -32,6 +31,11 @@ const Navbar: React.FC = () => {
       icon: <Plus size={24} className="text-white" />,
       label: "Add",
       path: "/add"
+    },
+    {
+      icon: <BarChart size={20} />,
+      label: "Analytics",
+      path: "/analytics"
     },
     {
       icon: <Settings size={20} />,

@@ -9,6 +9,7 @@ import NotFound from "./pages/NotFound";
 import Transactions from "./pages/Transactions";
 import AddTransaction from "./pages/AddTransaction";
 import BudgetPage from "./pages/BudgetPage";
+import AnalyticsPage from "./pages/AnalyticsPage";
 import Layout from "./components/Layout";
 import { TransactionProvider } from "./context/TransactionContext";
 
@@ -27,6 +28,7 @@ const App = () => (
               <Route path="/transactions" element={<Transactions />} />
               <Route path="/add" element={<AddTransaction />} />
               <Route path="/budget" element={<BudgetPage />} />
+              <Route path="/analytics" element={<AnalyticsPage />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </Layout>
