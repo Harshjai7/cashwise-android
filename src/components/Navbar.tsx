@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { CircleDollarSign, Home, PieChart, Plus, Settings, BarChart } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { ThemeToggle } from "./ThemeToggle";
 
 interface NavItem {
   icon: React.ReactNode;
@@ -69,6 +70,10 @@ const Navbar: React.FC = () => {
         visible ? "translate-y-0" : "translate-y-full"
       )}
     >
+      <div className="fixed top-4 right-4 z-50">
+        <ThemeToggle />
+      </div>
+      
       <div className="relative flex items-center justify-around max-w-md mx-auto px-4 py-1 h-16">
         {navItems.map((item, index) => (
           <Link 
