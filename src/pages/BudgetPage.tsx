@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 import { useTransactions } from "@/context/TransactionContext";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
@@ -15,15 +16,17 @@ import BudgetProgress from "@/components/BudgetProgress";
 import { Budget } from "@/utils/transactionUtils";
 import { useNavigate } from "react-router-dom";
 
+interface FormData {
+  category: string;
+  amount: string;
+  period: "monthly" | "weekly" | "yearly";
+}
+
 const BudgetPage = () => {
   const { budgets, budgetUtilization, addNewBudget, removeBudget, isLoading } = useTransactions();
   const navigate = useNavigate();
   
-  const [formData, setFormData<{
-    category: string;
-    amount: string;
-    period: "monthly" | "weekly" | "yearly";
-  }>({
+  const [formData, setFormData] = useState<FormData>({
     category: "",
     amount: "",
     period: "monthly"
