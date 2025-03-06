@@ -13,6 +13,7 @@ import AnalyticsPage from "./pages/AnalyticsPage";
 import Layout from "./components/Layout";
 import { TransactionProvider } from "./context/TransactionContext";
 import { ThemeProvider } from "./components/ThemeProvider";
+import { ThemeToggle } from "./components/ThemeToggle";
 
 const queryClient = new QueryClient();
 
@@ -21,6 +22,9 @@ const App = () => (
     <QueryClientProvider client={queryClient}>
       <TransactionProvider>
         <TooltipProvider>
+          <div className="fixed top-4 right-4 z-50">
+            <ThemeToggle />
+          </div>
           <Toaster />
           <Sonner />
           <BrowserRouter>
