@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { useTransactions } from "@/context/TransactionContext";
@@ -27,6 +26,7 @@ const Index = () => {
     );
   }
 
+  // Ensure we're using the Indian Rupee symbol
   return (
     <div className="container-padding min-h-screen animate-fade-in">
       <div className="py-8 space-y-8">

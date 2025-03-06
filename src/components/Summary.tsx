@@ -50,7 +50,7 @@ const Summary: React.FC = () => {
                 item.title === "Expenses" && "text-expense",
                 item.title === "Balance" && (item.value >= 0 ? "text-income" : "text-expense")
               )}>
-                ${Math.abs(item.value).toFixed(2)}
+                ₹{Math.abs(item.value).toFixed(2)}
               </p>
             </div>
           </CardContent>

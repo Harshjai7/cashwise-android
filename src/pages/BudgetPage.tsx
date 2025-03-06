@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import { useTransactions } from "@/context/TransactionContext";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
@@ -20,7 +19,7 @@ const BudgetPage = () => {
   const { budgets, budgetUtilization, addNewBudget, removeBudget, isLoading } = useTransactions();
   const navigate = useNavigate();
   
-  const [formData, setFormData] = useState<{
+  const [formData, setFormData<{
     category: string;
     amount: string;
     period: "monthly" | "weekly" | "yearly";
@@ -78,6 +77,7 @@ const BudgetPage = () => {
     );
   }
 
+  // Update the form rendering part with INR currency symbol
   return (
     <div className="container-padding min-h-screen animate-fade-in pb-16">
       <div className="py-8 space-y-6">
@@ -124,7 +124,7 @@ const BudgetPage = () => {
                 
                 <div className="space-y-1">
                   <label htmlFor="amount" className="text-sm font-medium block">
-                    Amount ($)
+                    Amount (₹)
                   </label>
                   <Input
                     id="amount"

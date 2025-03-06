@@ -21,7 +21,7 @@ const BudgetProgress: React.FC<BudgetProgressProps> = ({
       <div className="flex justify-between items-center">
         <span className="text-sm font-medium">{category}</span>
         <span className="text-sm text-muted-foreground">
-          ${spent.toFixed(2)} / ${budget.toFixed(2)}
+          ₹{spent.toFixed(2)} / ₹{budget.toFixed(2)}
         </span>
       </div>
       
@@ -40,7 +40,7 @@ const BudgetProgress: React.FC<BudgetProgressProps> = ({
         ) : percentage > 90 ? (
           <span className="text-amber-500 font-medium">Almost reached</span>
         ) : (
-          <span>${(budget - spent).toFixed(2)} remaining</span>
+          <span>₹{(budget - spent).toFixed(2)} remaining</span>
         )}
       </div>
     </div>

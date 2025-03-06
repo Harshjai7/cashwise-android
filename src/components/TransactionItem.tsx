@@ -93,7 +93,7 @@ const TransactionItem: React.FC<TransactionItemProps> = ({ transaction, onEdit }
             "font-semibold",
             transaction.type === "income" ? "text-income" : "text-expense"
           )}>
-            {transaction.type === "income" ? "+" : "-"}${transaction.amount.toFixed(2)}
+            {transaction.type === "income" ? "+" : "-"}₹{transaction.amount.toFixed(2)}
           </span>
           
           <Dialog open={showDialog} onOpenChange={setShowDialog}>
@@ -106,7 +106,7 @@ const TransactionItem: React.FC<TransactionItemProps> = ({ transaction, onEdit }
               <DialogHeader>
                 <DialogTitle>Transaction Options</DialogTitle>
                 <DialogDescription>
-                  {transaction.description} - ${transaction.amount.toFixed(2)}
+                  {transaction.description} - ₹{transaction.amount.toFixed(2)}
                 </DialogDescription>
               </DialogHeader>
               <div className="flex gap-2 justify-end">

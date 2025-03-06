@@ -146,7 +146,7 @@ const TransactionForm: React.FC<TransactionFormProps> = ({ transaction, onSubmit
       <div className="space-y-4">
         <div>
           <label htmlFor="amount" className="text-sm font-medium block mb-1">
-            Amount ($)
+            Amount (₹)
           </label>
           <Input
             id="amount"
