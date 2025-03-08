@@ -1,4 +1,3 @@
-
 import React, { createContext, useContext, useState, useEffect } from "react";
 import { 
   Transaction, 
@@ -83,7 +82,7 @@ export const TransactionProvider: React.FC<{ children: React.ReactNode }> = ({ c
       refreshData();
       toast({
         title: "Transaction added",
-        description: `${transaction.type === "income" ? "Income" : "Expense"} of $${transaction.amount.toFixed(2)} recorded`,
+        description: `${transaction.type === "income" ? "Income" : "Expense"} of ₹${transaction.amount.toFixed(2)} recorded`,
       });
       return newTransaction;
     } catch (error) {
@@ -102,7 +101,7 @@ export const TransactionProvider: React.FC<{ children: React.ReactNode }> = ({ c
       refreshData();
       toast({
         title: "Transaction updated",
-        description: "Your transaction has been updated",
+        description: `Your transaction of ₹${transaction.amount.toFixed(2)} has been updated`,
       });
     } catch (error) {
       console.error("Error updating transaction:", error);
@@ -138,7 +137,7 @@ export const TransactionProvider: React.FC<{ children: React.ReactNode }> = ({ c
       refreshData();
       toast({
         title: "Budget created",
-        description: `Budget of $${budget.amount.toFixed(2)} set for ${budget.category}`,
+        description: `Budget of ₹${budget.amount.toFixed(2)} set for ${budget.category}`,
       });
       return newBudget;
     } catch (error) {
@@ -157,7 +156,7 @@ export const TransactionProvider: React.FC<{ children: React.ReactNode }> = ({ c
       refreshData();
       toast({
         title: "Budget updated",
-        description: "Your budget has been updated",
+        description: `Your budget of ₹${budget.amount.toFixed(2)} has been updated`,
       });
     } catch (error) {
       console.error("Error updating budget:", error);
